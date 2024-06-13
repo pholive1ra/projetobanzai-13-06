@@ -1,0 +1,95 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+
+
+
+<body>
+  <header>
+    <div class="logo-header">
+      <img class="logo-img" src="logobanzai.png">
+    </div>
+    <input type="checkbox" id="nav_check" hidden>
+    <nav>
+      <ul>
+        <li>
+          <a href="../index.html" class="">Início</a>
+        </li>
+        <li>
+          <a href="../index.html">Motos</a>
+        </li>
+        <li>
+          <a href="../equipamentos/equipamentos.html">Equipamentos</a>
+        </li>
+        <li>
+          |
+        </li>
+        <li class="area-login">
+          <a class="active" href="login.html">Login</a>
+          
+        </li>
+        <li class="area-registro">
+          <a class="btn-registrar" href="../cadastro/cadastro.html">Registrar</a>
+        </li>
+      </ul>
+
+    </nav>
+    <label for="nav_check" class="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </label>
+  </header>
+
+  <main class="container">
+    <form method="POST" id="formulario">
+      <div class="logo">
+        <img class="logo-img" src="../imagens/logobanzai.png">
+      </div>
+      <div class="content">
+        <div class="caixa">
+          <label for="iemail">Email</label>
+          <input type="email" name="email" id="iemail" placeholder="Digite seu Email" required>
+        </div>
+
+        <div class="caixa">
+          <label for="isenha">Senha</label>
+          <input type="password" name="senha" id="isenha" minlength="8" maxlength="30" placeholder="Digite sua Senha"
+            required>
+        </div>
+
+      </div>
+      <center>
+        <div class="form-btn">
+          <input type="submit" value="Entrar">
+        </div>
+      </center>
+      <br>
+
+      <center>
+        <div class="cadastro"> Caso não tenha Conta.
+          <a href="../cadastro/cadastro.html" <strong> Cadastre-se aqui </strong>
+          </a>
+        </div>
+        
+          <div class="login"> Esqueceu sua senha?
+            <a href="redefinir.html" <strong> Clique aqui </strong>
+            </a>
+          </div>
+       
+      </center>
+    </form>
+  </main>
+  <script src="login.js"></script>
+</body>
+
+</html>

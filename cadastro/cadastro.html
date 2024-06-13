@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Cadastro</title>
+  <link href="cadastro.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img class="logo-img" src="logobanzai.png">
+    </div>
+    <input type="checkbox" id="nav_check" hidden>
+    <nav>
+      <ul>
+        <li>
+          <a href="../index.html" class="">Início</a>
+        </li>
+        <li>
+          <a href="../index.html">Motos</a>
+        </li>
+        <li>
+          <a href="../equipamentos/equipamentos.html">Equipamentos</a>
+        </li>
+        <li>
+          |
+        </li>
+        <li class="area-login">
+          <a class="btn-login" href="../Login/login.html">Login</a>
+        </li>
+        <li class="area-registro">
+          <a class="active" href="">Registrar</a>
+        </li>
+      </ul>
+
+    </nav>
+    <label for="nav_check" class="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </label>
+  </header>
+  <br><br>
+
+  <center>
+    <div class="container">
+
+      <!-- <div class="name"> -->
+
+      <form id="meuformulario" action="register.php" method="POST">
+        <div class="logo">
+
+          <img class="logo-img" src="../imagens/logobanzai.png">
+
+        </div>
+        <div class="caixa">
+
+
+          <h1>
+            <p id="cad"> Cadastre-se Aqui </p>
+          </h1>
+
+           <label for="nome"> Nome Completo: </label>
+          <input type="text" id="iname" name="nome" minlength="1" maxlength="60" placeholder="Digite seu nome" required>
+
+          <br><br>
+
+          <div class="generos">
+            <span class="gen-title">Gender</span>
+            <div class="categoria">
+              <input type="radio" name="gender" value="male" id="male">
+              <label for="male">Masculino </label>
+              <input type="radio" name="gender" value="female" id="female">
+              <label for="female">Feminino</label>
+              <input type="radio" name="gender" value="others" id="others">
+              <label for="others">Outro</label>
+            </div>
+
+            <br><br>
+
+            <label for="nome materno"> Nome Materno: </label>
+            <input type="text" id="nome materno" name="nome materno" minlength="1" maxlength="60"
+              placeholder="Nome materno" required>
+
+            <br><br>
+
+
+
+            <label for="idate"> Nascimento: </label>
+            <input type="text" name="date" id="idate" minlength="1" maxlength="6" placeholder="Data de nascimento"
+              required>
+
+            <br><br>
+
+            <label for="inum"> Celular: </label>
+            <input type="text" name="num" id="inum" placeholder="(+55) +Numero" minlength="10" maxlength="10" required>
+
+            <br><br>
+
+            <label for="inumfix"> Celular Fixo: </label>
+            <input type="text" name="numfix" id="inumfix" placeholder="(+55) +Numero" minlength="8" maxlength="8"
+              required>
+
+            <br><br>
+
+            <label for="cpf"> CPF: </label>
+            <input type="text" id="cpf" name="cpf" minlength="14" maxlength="14"
+              onkeyPress="formatar('###.###.###-##', this)" oninput="validarCPF(this)" autocomplete="off"
+              placeholder="Digite seu CPF" required>
+
+            <br><br>
+
+            <label for="CEP"> CEP: </label>
+            <input type="text" id="icep" name="cep" minlength="1" maxlength="9" placeholder="Digite seu CEP" required>
+ 
+            <br><br> 
+
+
+            <label for="email" id="email"> Email: </label>
+            <input type="text" id="input_email" oninput="validar_email(this)" placeholder="Digite seu email" required>
+
+            <br><br>
+
+            <label for="confirmar_email" id="confirmar_email"> Confirmar Email: </label>
+            <input type="text" id="inputconf_email" placeholder="Confirme seu email" required
+              oninput="validarconf_email(this)">
+
+            <br><br>
+
+            <label id="senha" for="inputsenha"> Senha: </label>
+            <input type="password" id="inputsenha" name="senha" oninput="validarinputsenha(this)"
+              placeholder="Digite sua senha" minlength="1" required>
+
+            <br><br>
+
+            <label id="confirmar_senha" for="confirmar_senha1"> Confirmar Senha: </label>
+            <input type="password" id="confirmar_senha1" placeholder="Confirme sua senha" name="confirmar_senha"
+              oninput="validarinputconfsenha(this)" minlength="1" required>
+
+            <br><br>
+
+          </div>
+
+          <input id="reset" type="reset">
+
+          <input id="cadastrar" type="submit" value="Cadastrar" onclick="cadastrar()">
+
+         
+      </form>
+    </div>
+  </center>
+  <script src="./cadastro.js""> </script>
+</body>
+
+</html>
