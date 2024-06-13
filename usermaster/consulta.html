@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consulta de Usuários</title>
+  <link rel="stylesheet" href="consulta.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo-header">
+      <h1> Usuários </h1>
+    </div>
+    <h1>Consulta dos Usuários</h1>
+    <nav>
+      <nav>
+        <ul>
+          <li>
+            <a class="btn-dash" href="../dashboard/dash.html"">Dashboard</a>
+          </li>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="search-bar">
+      <div class="search-field">
+        <label for="name">Nome</label>
+        <input type="text" id="name">
+      </div>
+      <div class="search-field">
+        <label for="login">Login</label>
+        <input type="text" id="login">
+      </div>
+      <div class="search-field">
+        <label for="perfil">Perfil</label>
+        <select id="perfil">
+          <option value="">Selecione</option>
+          <option value="admin">Administrador</option>
+          <option value="user">Usuário</option>
+        </select>
+      </div>
+      <div class="search-field">
+        <label for="status">Situação</label>
+        <select id="status">
+          <option value="ativo">Ativo</option>
+          <option value="inativo">Inativo</option>
+        </select>
+      </div>
+      <div class="search-buttons">
+        <button id="advanced-search">Pesquisar CPF</button>
+        <button id="search">Pesquisar</button>
+      </div>
+    </div>
+
+    <button id="add-user" class="btn-add-user">+ Criar novo usuário</button>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Login</th>
+          <th>Email</th>
+          <th>Perfil</th>
+          <th>Último Login</th>
+          <th>Situação</th>
+          <th>Opções</th>
+        </tr>
+      </thead>
+      <tbody id="user-table-body">
+        <!-- Os usuários serão inseridos aqui via JavaScript -->
+      </tbody>
+    </table>
+
+    <div class="pagination">
+      <button class="page-btn">◀</button>
+      <span>Página 1 de 10</span>
+      <button class="page-btn">▶</button>
+      <label>
+        Itens por página:
+        <select>
+          <option value="10">10</option>
+          <option value="25">25</option>
+          <option value="50">50</option>
+        </select>
+      </label>
+    </div>
+  </div>
+
+  <script src="consulta.js"></script>
+</body>
+
+</html>
